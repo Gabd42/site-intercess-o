@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministério de Intercessão - Filhos da Luz</title>
+    <style>
+        :root {
+            --primary-color: #3f51b5;
+            --secondary-color: #f1f1f1;
+            --text-color: #333;
+            --accent-color: #ff9800;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            overflow: hidden;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: var(--accent-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .menu-toggle:focus {
+            outline: none;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 10px;
+            }
+        }
+
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .card h2 {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .card div {
+            padding: 15px;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .records-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .record-item {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .record-date {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .record-description {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Ministério de Intercessão - Filhos da Luz</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+        </ul>
+    </nav>
+
+    <section id="records">
+        <div class="card">
+            <h2>Registros dos Encontros</h2>
+            <div>
+                <p>Acompanhe os registros dos nossos encontros aqui. Cada reunião é documentada com a data e as intenções compartilhadas.</p>
+                <ul class="records-list">
+                    <li class="record-item">
+                        <p class="record-date">16 de janeiro de 2025</p>
+                        <p class="record-description">Encontro focado na oração pela paz nas famílias e crescimento espiritual da comunidade.</p>
+                    </li>
+                    <li class="record-item">
+                        <p class="record-date">09 de janeiro de 2025</p>
+                        <p class="record-description">Reunião com a intenção de orar pela saúde da comunidade e discutir novos projetos do grupo.</p>
+                    </li>
+                    <li class="record-item">
+                        <p class="record-date">02 de janeiro de 2025</p>
+                        <p class="record-description">Intenções pela conversão das famílias e fortalecimento da união do grupo de oração.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ministério de Intercessão - Filhos da Luz. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
